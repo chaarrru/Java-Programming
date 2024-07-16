@@ -1,0 +1,59 @@
+//Calculator Program
+import java.util.*;
+class eg{
+    public static void main(String[] args){
+        Scanner my = new Scanner(System.in);
+        System.out.println("Welcome ");
+        System.out.print("Enter a:");
+        int a = my.nextInt();
+        System.out.print("Enter b:");
+        int b = my.nextInt();
+        System.out.println("Enter your choice: ");
+        System.out.println("0-->Addition");
+        System.out.println("1-->Subtraction");
+        System.out.println("2-->Multiplication");
+        System.out.println("3-->Division");
+        int choice=my.nextInt();
+       
+        switch(choice){
+        case 0:
+            System.out.print("Result "+add(a,b));
+            break;
+        case 1:
+            System.out.print("Result "+sub(a,b));
+            break;
+        case 2:
+            System.out.print("Result "+mul(a,b));
+            break;
+        case 3:    
+            if(b!=0)
+                System.out.print("Result "+div(a,b));
+            else
+                System.out.print("Not possible");
+            break;
+        default:
+            System.out.print("Invalid choice");
+            break;
+        }
+    }
+    static int add(int a,int b){
+        //int sum;
+        //sum=
+        return a+b;
+    }
+     static int sub(int a,int b){
+        //int sub;
+        //sub=;
+        return a-b;
+    }
+     static int mul(int a,int b){
+        //int mul;
+        //mul=
+        return a*b;
+    }
+     static int div(int a,int b){
+        //int div;
+        //div=
+        return a/b;
+    }
+}
