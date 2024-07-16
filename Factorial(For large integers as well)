@@ -1,0 +1,23 @@
+import java.util.*;
+import java.math.BigInteger;
+
+class Factorial {
+    public static void main(String[] args) {
+        Scanner my = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int a = my.nextInt();
+        
+        // Calculate and print the factorial
+        System.out.println("Result: " + factorial(a));
+    }
+
+    static BigInteger factorial(int a) {
+        BigInteger fact = BigInteger.ONE; // Initialize with 1
+        
+        for (int i = 1; i <= a; i++) {
+            fact = fact.multiply(BigInteger.valueOf(i)); // Multiply
+        }
+        
+        return fact;
+    }
+}
