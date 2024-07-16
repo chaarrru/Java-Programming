@@ -1,0 +1,16 @@
+import java.util.*;
+class rev{
+    public static void main(String[] args){
+        Scanner my = new Scanner(System.in);
+        int a = my.nextInt();
+        System.out.print("The reversed digit is "+ pall(a));
+    }
+    static int pall(int x){
+        int s=0;
+        while(x>0){
+            s=s*10+(x%10);
+            x=x/10;
+        }
+        return s;
+    }
+}
