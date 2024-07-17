@@ -1,0 +1,26 @@
+//ttwisted prime
+import java.util.*;
+class armstrong{
+    public static void main(String[] args){
+        Scanner my = new Scanner(System.in);
+        int n;
+        n=my.nextInt();
+        
+        if(iauto(n)){
+            System.out.print("Automorphic");
+        }
+        else
+            System.out.print("Not Automorphic");
+        
+    }
+    static boolean iauto(int x){
+        int y=x*x;
+        while(x>0){
+            if(x%10 != y%10)
+                return false;
+            x=x/10;
+            y=y/10;
+        }
+        return true;
+    }
+}
