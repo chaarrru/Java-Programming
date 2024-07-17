@@ -1,0 +1,19 @@
+//sum of digits
+import java.util.*;
+class armstrong{
+    public static void main(String[] args){
+        Scanner my = new Scanner(System.in);
+        int n;
+        n=my.nextInt();
+        System.out.print(sum(n));
+        
+    }
+    static int sum(int n){
+        int s=0;
+        while(n>0){
+            s=s+(n%10);
+            n=n/10;
+        }
+        return s;
+    }
+}
