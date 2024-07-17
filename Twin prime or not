@@ -1,0 +1,32 @@
+//ttwisted prime
+import java.util.*;
+class prime{
+    public static void main(String[] args){
+        Scanner my=new Scanner(System.in);
+        int x,y;
+        x=my.nextInt();
+        y=my.nextInt();
+      //  x=rev(n);
+        if(x>1 && y>1 && isprime(x) && isprime(y)){
+            if(x-y==2 || y-x==2){
+                System.out.print("Twin Prime");
+            }
+            else
+                System.out.print("Not a Twin Prime");
+        }
+        else
+            System.out.print("Not a Twin Prime");
+    }
+   
+    static boolean isprime(int n){
+        int i;
+        if(n<2)
+          return false;
+        for(i=2;i<=n/2;i++){
+            if(n%i==0)
+                return false;
+        }
+        return true;
+    }
+    
+} 
