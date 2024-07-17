@@ -1,0 +1,36 @@
+//ttwisted prime
+import java.util.*;
+class armstrong{
+    public static void main(String[] args){
+        Scanner my = new Scanner(System.in);
+        int n,res,count;
+        n=my.nextInt();
+        count=cnt(n);
+        res=isarm(n,count);
+        if(res==n)
+            System.out.print("Armstrong");
+        else
+            System.out.print("Not Armstrong");
+        
+    }
+    static int cnt(int n){
+        int c=0;
+        while(n>0){
+            c++;
+            n=n/10;
+        }
+        return c;
+    }
+    
+    static int isarm(int n,int y){
+        int s=0,rem;
+        while(n>0){
+            rem=n%10;//stores last dig
+            //rem=
+            s+=Math.pow(rem,y);//stores s,i.e sum s=last dig power count (Eg:123-->3 power 3)
+            n=n/10;//returns 12
+        }
+        return s;
+    }
+    
+}
