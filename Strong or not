@@ -1,0 +1,37 @@
+//ttwisted prime
+import java.util.*;
+class armstrong{
+    public static void main(String[] args){
+        Scanner my = new Scanner(System.in);
+        int n;
+        n=my.nextInt();
+        
+        if(istrong(n)){
+            System.out.print("Strong");
+        }
+        else
+            System.out.print("Not Strong");
+        
+    }
+    static int fact(int n){
+        int i,fact=1;
+        for(i=1;i<=n;i++){
+            fact=fact*i;
+            
+        }
+        return fact;
+    }
+    
+    static boolean istrong(int n){
+        int s=0,m=n;
+        while(n>0){
+            s=s+fact(n%10);
+            n=n/10;
+        }
+        if(m==s)
+            return true;
+        else
+            return false;
+    }
+    
+}
