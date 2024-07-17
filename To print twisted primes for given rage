@@ -1,0 +1,38 @@
+//ttwisted prime
+import java.util.*;
+class prime{
+    public static void main(String[] args){
+        Scanner my=new Scanner(System.in);
+        int start,end;
+        start=my.nextInt();
+        end=my.nextInt();
+        for(int i=start;i<=end;i++){
+        if(checktwist(i)){
+           System.out.print(i+" ");
+    }
+        }  
+    }
+    static int rev(int n){
+        int s=0;
+        while(n>0){
+            s=s*10+(n%10);
+            n=n/10;
+        }
+        return s;
+    }
+    static boolean isprime(int n){
+        int i;
+        if(n<2)
+            return false;
+        for(i=2;i<=n/2;i++){
+            if(n%i==0)
+                return false;
+        }
+        return true;
+    }
+    static boolean checktwist(int n){
+        //if()
+            return isprime(n) && isprime(rev(n));
+        //return 0;
+    }
+} 
