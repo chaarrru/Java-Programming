@@ -1,0 +1,25 @@
+//concatenate 2 arrays
+public class Solution {
+    public static int[] getConcatenation(int[] nums) {
+        int n = nums.length;
+        int[] ans = new int[n+ n];
+
+        // Copy nums into ans twice
+        for (int i = 0; i < n; i++) {
+            ans[i] = nums[i];
+            ans[i + n] = nums[i];
+        }
+
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n1=in.nextInt();
+        int[] nums1 = new int[n1];
+        int[] result1 = getConcatenation(nums1);
+        System.out.println(Arrays.toString(result1));  // Output: [1, 2, 1, 1, 2, 1]
+
+        
+    }
+}
