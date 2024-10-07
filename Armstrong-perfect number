@@ -1,0 +1,56 @@
+/******************************************************************************
+Qn:
+    Given an input as integer ...if the input is x digit number greater than 10,then raise the individual digits of a number in their powers with x and add the individual digits until the output becomes a single number.if the output is 1 then print as "perfect number",else as "not a perfect number". 
+(iterate the same process further until it forms a single digit number )
+                            Sample input1:
+                            1000
+                            Sample output1: 
+                            Perfect number
+                            
+                            Sample input 2 :
+                            10283
+                            Sample output 2:
+                            Not a perfect number
+Explanation:
+    Get the integer as input, take powers of the individual digits of a number ,after compuring the powers,
+    sum the resulant power of the individual digits, iterate this step until they form a single digit number.
+    after that determine whether its equal to one or not if yes--> print as perfect number,else as not "a perfect number"
+    
+                            
+
+*******************************************************************************/
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int n=in.nextInt();
+        int x= Integer.toString(n).length();
+        //System.out.println(x);
+        if(n<10){
+            System.out.print("Invalid input");
+        }
+        int res=n;
+        //int ans;
+        while(res>=10){
+            res=perfectnum(res,x);
+            x=Integer.toString(res).length();
+        }
+        if(res==1){
+            System.out.println("Perfect number");
+        }
+        else{
+            System.out.println("Not a perfect number");
+        }
+        
+    }
+    static int perfectnum(int n,int x){
+        int sum=0;
+        while(n>0){
+            int rem=n%10;
+            sum+=Math.pow(rem,x);
+            n=n/10;
+        }
+        return sum;
+    }
+}
